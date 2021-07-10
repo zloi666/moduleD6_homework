@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+	{% block content %}
+	<h2>Список разданных книг</h2>
+		<ul>
+			{% for rec in object_list %}
+			<li>{{ rec.friend_name }} -- {{ rec.book }}</li>
+			{% endfor %}
+		</ul>
+	{% endblock %}
