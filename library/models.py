@@ -27,7 +27,7 @@ class Book(models.Model):
     copy_count = models.SmallIntegerField(default=0)  
     price = models.DecimalField(max_digits=6, decimal_places=2, default=0)
     publisher = models.ForeignKey(Publisher, null=True, on_delete=models.CASCADE, related_name="books")
-    image = models.ImageField(upload_to='covers/', null=True, blank=True)
+    image = models.ImageField(upload_to='covers', null=True, blank=True)
 
 
     def __str__(self):
